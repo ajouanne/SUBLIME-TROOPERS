@@ -1,1 +1,0 @@
-# Corrigé inscription/authentification
