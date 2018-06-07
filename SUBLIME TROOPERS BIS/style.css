@@ -1,0 +1,174 @@
+@charset:utf-8;
+
+/*====== CSS commun à toutes les pages =======*/
+
+/* == CSS pour les liens hypertextes == */
+
+a:link {
+	color: #4a4a4a;
+	text-decoration: none;
+	}
+a:visited {
+	color: #4a4a4a;
+}
+a:hover {
+	color: #FF8901;
+	text-decoration: none;
+}
+a:active {
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+/* css pour le corps du site */
+html {
+	background-color: #bebebe;
+	max-width: 2440px;
+	font-family: Verdana, sans serif;
+	font-size: 4vw; 
+	background-image:url(FOND.jpg);
+}
+body {
+	max-width: 80%;
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* css pour l'en-tête TITRE */
+header {
+	background-color: #000000;
+}
+.en-tete {
+	width: 100%;
+}
+.tdLogo {
+	width: 25%;
+	text-align: center;
+	vertical-align: center;
+}
+#logo {
+	width: 25vw;
+	margin-top: 0vw;
+	text-align: center;
+	vertical-align: center;
+}
+.titre {
+	width: 60%;
+	color: white;
+	font-size: 4vw;
+	text-align: center;
+}
+.blank {
+	width: 20%;       /*permet d'ajouter une cellule vide pour centrer le titre*/
+}
+
+/* css pour l'en-tête MENU */
+li {
+	display: inline;
+	list-style: none;
+	font-size: 50%;
+}
+.liMenu {
+	color: #3F533B;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #3F533B;
+  text-align: center;
+  margin-top: 0vw;
+  padding-bottom: 1vw;
+  border-top: 2px solid white;
+}
+.menu li {
+  display: inline;
+  margin-right: 1px;
+  color: #fff;
+  background: #446B13;
+}
+.menu li a {
+  background: #446B13;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  font: 1em "Trebuchet MS",Arial,sans-serif;
+  line-height: 1em;
+  padding: 4px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+.menu li a:hover, .menu li a:focus, .menu li a:active {
+  background: #3F533B;
+  text-decoration: underline ;
+ }
+
+
+
+/* css pour le footer */
+
+footer {
+	background-color: #000000;
+	color: white;
+	margin-top: 3vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	font-size: 3vw;
+	text-align: center;
+}
+#aFoot {
+	color: white;
+	text-decoration: none;
+}
+
+/* ====== CSS page d'accueil ===== */
+
+/* alignement des vidéos par <TABLE> */
+
+.tableVideo {
+	text-align: center;
+}
+
+/* caracteristiques des titres et textes */
+
+p {
+	margin: 2vw;
+	font-family: times new roman, serif;
+	font-size: 40%;
+}
+#centred {
+	text-align: center;
+}
+h2 {
+	font-size: 3vw;
+	text-align: center;
+	color: #000000;
+}
+#Xbleu {
+	color: #268FD2;
+}
+h3 {
+	font-size: 1.5vw;
+	color: #93907b;
+	margin: 2vw;
+}
+.image {
+	width: 80%;
+	margin: auto;
+}
+#logo {
+	width: 15vw;
+	margin-top: 0vw;
+	text-align: center;
+	vertical-align: center;
+}
+img {
+	width: 3vw;
+	margin-top: 1px;
+}
+table {
+	width: 100%;
+	max-width: 1330px;
+}
+td {
+	text-align: center;
+}
