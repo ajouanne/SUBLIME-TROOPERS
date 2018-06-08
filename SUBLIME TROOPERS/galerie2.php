@@ -23,16 +23,27 @@
 	
 	<!-- menu -->
 	<ul class="menu">
-		<li><a href="accueil.html">ACCUEIL</a></li>
-		<li><a href="quisont_ils.html">QUI SONT-ILS ?</a></li>
-		<li><a href="galerie.html">GALERIE</a></li>
-		<li><a href="musique.html">MUSIQUE</a></li>
-		<li><a href="inscription.html">INSCRIPTION</a></li>
+		<li><a href="accueil2.php">ACCUEIL</a></li>
+		<li><a href="quisont_ils2.php">QUI SONT-ILS ?</a></li>
+		<li><a href="galerie2.php">GALERIE</a></li>
+		<li><a href="musique2.php">MUSIQUE</a></li>
+		<li><a href="archives2.php">ARCHIVES</a><li> 
 	</ul>
 	</ul>
 </header>
 
+
+
 <!-- Section corps -->
+
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+	echo "Bienvenue ".$_SESSION['username'];
+	?>
+<?php 
+}else header('Location:login.php')
+?>
 
 		</article>
 		<p>
@@ -97,7 +108,9 @@
 		
 		</p>
 
-
+<?php
+echo "<a href='logout.php'><p>Déconnexion</p><br><br>";
+?>
 
 <!-- Section pied-de-page -->
 
