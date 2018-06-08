@@ -5,26 +5,25 @@
 /* == CSS pour les liens hypertextes == */
 
 a:link {
-	color: #4a4a4a;
+	color: #446B13;
 	text-decoration: none;
 	}
 a:visited {
-	color: #4a4a4a;
+	color: #446B13;
 }
 a:hover {
-	color: #FF8901;
+	color: #000000;
 	text-decoration: none;
 }
 a:active {
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 /* css pour le corps du site */
 html {
 	background-color: #bebebe;
 	max-width: 2440px;
-	font-family: Verdana, sans serif;
+	font-family: "Courier New";
 	font-size: 4vw; 
 	background-image:url(FOND.jpg);
 }
@@ -35,6 +34,7 @@ body {
 }
 
 /* css pour l'en-tête TITRE */
+
 header {
 	background-color: #3F533B;
 }
@@ -63,6 +63,7 @@ header {
 }
 
 /* css pour l'en-tête MENU */
+
 li {
 	display: inline;
 	list-style: none;
@@ -91,7 +92,7 @@ li {
   background: #446B13;
   color: #fff;
   border: 1px solid #FFFFFF;
-  font: 1em "Trebuchet MS",Arial,sans-serif;
+  font: "Courier New";
   line-height: 1em;
   padding: 4px 20px;
   text-align: center;
@@ -99,10 +100,21 @@ li {
 }
 .menu li a:hover, .menu li a:focus, .menu li a:active {
   background: #3F533B;
-  text-decoration: underline ;
  }
-
-
+#compte {
+  font-size:2vw;
+  background: #594739;
+  color: #fff;
+  border: 1px solid #594739;
+  font: "Courier New";
+  line-height: 1em;
+  padding: 4px 20px;
+  text-align: center;
+  text-decoration: none;
+ }
+#compte:hover, #compte:focus, #compte:active {
+  background: #000000;
+}
 
 /* css pour le footer */
 
@@ -127,20 +139,29 @@ footer {
 .tableVideo {
 	text-align: center;
 }
+#soustitre{
+	font-family: "Courier New";
+	font-size: 50%;
+	margin-top: 0vw;
+	text-align: center;
+	vertical-align: center;	
+}
 
 /* caracteristiques des titres et textes */
 
 p {
 	margin: 2vw;
-	font-family: times new roman, serif;
+	font-family: "Courier New";
 	font-size: 40%;
 }
 #centred {
 	text-align: center;
 }
+
 h2 {
 	font-size: 3vw;
 	text-align: center;
+	margin-right:10vw;
 	color: #000000;
 }
 #Xbleu {
@@ -164,11 +185,13 @@ h3 {
 img {
 	width: 3vw;
 	margin-top: 1px;
+	vertical-align: middle;
 }
 table {
 	width: 100%;
 	max-width: 1330px;
 }
 td {
-	text-align: center;
+	text-align: center;	
+	font-size: 3vw;
 }

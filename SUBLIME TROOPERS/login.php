@@ -1,40 +1,39 @@
-<?php 
+<?php
 session_start();
 include_once 'PDOConnection.php';
 if (isset($_POST['submit'])){
-    $mail=$_POST['mail'];
-    $passworda=$_POST['passworda'];
-    if(empty($mail)){
-        echo"<div class='erreur'> Veuillez saisir votre email</div>";
-    } else if (empty($passworda)){
+    $login=$_POST['login'];
+    $password=$_POST['password'];
+    if(empty($login)){
+        echo"<div class='erreur'> Veuillez saisir votre login</div>";
+    } else if (empty($password)){
         echo "<div class='erreur'> Veuillez saisir votre mot de passe</div>";
     }
     else {
         
         try{
             $bdd=PDOConnection::getInstance();
-            $password=sha1($passworda);
+            $password=$password;
             $reponse = $bdd->prepare("SELECT * FROM membre WHERE mail= :login AND passworda= :password")or exit(print_r($bdd->errorInfo()));
-            $reponse->bindParam(':mail', $mail, PDO::PARAM_STR);
-            $reponse->bindParam(':passworda', $passworda, PDO::PARAM_STR);
+            $reponse->bindParam(':login', $login, PDO::PARAM_STR);
+            $reponse->bindParam(':password', $password, PDO::PARAM_STR);
             $reponse->execute();
             
         }catch (Exception $e){
             die('Erreur : ' .$e->getMessage());
         }
         if ($reponse->rowCount()==1){
-            $_SESSION['name']=$mail;
-            $_SESSION['mdp']=$passworda;
+            $_SESSION['username']=$login;
+            $_SESSION['mdp']=$password;
             header('Location:membre.php');
             
         }else {
-            echo utf8_encode("<div class='erreur'> Mail ou mot de passe erroné !!</div>");
+            echo utf8_encode("<div class='erreur'> Login ou mot de passe erroné !!</div>");
         }
     }
 }
 ?>
 
-<!DOCTYPE html>
 <html>
 <head>
 <title>Formulaire de connexion</title>
@@ -45,19 +44,22 @@ if (isset($_POST['submit'])){
 	
 		<table>
 			<tr>
-				<td>Adresse Mail :</td>
-				<td><input type="text" name="mail" /></td>
+				<td>Login :</td>
+				<td><input type="text" name="login" />
+				</td>
 			</tr>
 			<tr>
 				<td>Mot de passe :</td>
-				<td><input type="password" name="passworda" /></td>
+				<td><input type="password" name="password" />
+				</td>
 			</tr>
 
 		</table><br>
 
-		<div>
-			<input type="submit" value="Connexion" name="submit" /> <input type="reset" value="Effacer" /><br> <br>
-			<a href="CONTACT.php">Vous n'avez pas encore rejoint les Troopers ?</a>
+		<div class="toto">
+			<input type="submit" value="Login" name="submit" /> <input
+				type="reset" value="Effacer" /><br> <br> <a href="inscription.html">Pas
+				encore membre ?</a>
 		</div>
 	</form>
 </body>

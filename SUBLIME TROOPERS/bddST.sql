@@ -17,12 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `BddST`
+-- Base de données :  `bddst`
 --
 
-Create DATABASE `bddST` default character set utf8;
+Create DATABASE `bddst` default character set utf8;
 
-use `bddST`;
+use `bddst`;
 
 -- --------------------------------------------------------
 
@@ -32,10 +32,10 @@ use `bddST`;
 
 CREATE TABLE `membre` (
   `ID` int(11) NOT NULL,
-  `nom` varchar(25) NOT NULL,
-  `prenom` varchar(25) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
   `grade` varchar(25) NOT NULL,
-  `mail` varchar(25) NOT NULL,
+  `mail` varchar(255) NOT NULL,
   `daten` date NOT NULL,
   `passworda` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -45,7 +45,7 @@ CREATE TABLE `membre` (
 --
 
 INSERT INTO `membre` (`ID`, `nom`, `prenom`, `grade`, `mail`, `daten`, `passworda`) VALUES
-(1, 'TALEMCI', 'AMINE', 'trooper', 'talemci.amine@gmail.to', '2016-12-02', '1edc5f380d3f13e6bc9e00d85e808196baa8a73c');
+(1, 'Chausson', 'Baptiste', 'Trooper', 'baptiste.chausson@hotmail.fr', '1994-03-01', 'guitarhero19');
 
 --
 -- Index pour les tables exportées

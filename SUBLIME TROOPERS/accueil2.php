@@ -1,10 +1,15 @@
+<?php
+session_start();
+	?>
+
 <!DOCTYPE html>
+
 
 <html lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="style.css" type="text/css" rel="stylesheet"/>
-<title>Archives</title>
+<title>Accueil</title>
 </head>
 <body>
 
@@ -13,6 +18,7 @@
 <header>
 
 	<!-- logo et titre -->
+	
 	<table class="en-tete">
 		<tr>
 			<td class="tdLogo"><img id="logo" src="LOGO_ST.png" align="center"/></td>
@@ -27,7 +33,6 @@
 		<li><a href="quisont_ils.html">QUI SONT-ILS ?</a></li>
 		<li><a href="galerie.html">GALERIE</a></li>
 		<li><a href="musique.html">MUSIQUE</a></li>
-		<li><a href="archives.html">ARCHIVES</a><li> 
 		<li><a href="inscription.html">INSCRIPTION</a></li>
 	</ul>
 </header>
@@ -36,24 +41,28 @@
 
 		</br>
 		<article>
-			<div align=center id="bloc1">ARCHIVES TROOPERS : ACCES AUTORISE 
+			<div align=center id="bloc1"><b>SUBLIME TROOPERS<b> :<br> COMBATTANTS DU ROCK 
 			</div>
+		</article>
+		<br>
+		
+<?php
+if(isset($_SESSION['username'])){
+	echo "Bienvenue "$_SESSION['grade'].$_SESSION['nom'].;
+	?>
 		</br>
 		<table>
 			<tr>
-				<td> <a href="RdT/Plan_de_bataille.pdf">Plan de bataille</a></td>
+				<td id="soustitre">!! Extraits acoustiques en Live !!
+				<audio controls>
+				<source src="Musiques/Big_Bad_Rock_live_acoustique.wav" type="audio/wav">
+				<source src="Musiques/Swallow_live_acoustique.wav" type="audio/wav">
+				</audio></td>
+			<td><img src="Image/Accueil/Concert.jpg"></td>
 			</tr>
 			<tr>
-				<td> <a href="RdT/Rapport_de_transmission1.pdf">Rapport de transmission n°1</a> </td>
 			</tr>
-			<tr>
-				<td> <a href="RdT/Rapport_de_transmission2.pdf">Rapport de transmission n°2</a> </td>
-			</tr>
-			<tr>
-				<td> <a href="RdT/Rapport_de_transmission3.pdf">Rapport de transmission n°3</a> </td>
-			</tr>
-		</table>
-
+			</table>
 
 
 <!-- Section pied-de-page -->
