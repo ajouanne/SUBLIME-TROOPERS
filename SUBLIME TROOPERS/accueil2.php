@@ -19,7 +19,9 @@
 		<tr>
 			<td class="tdLogo"><img id="logo" src="LOGO_ST.png" align="center"/></td>
 			<td class="titre">SUBLIME TROOPERS</td>
-			<td class=blank></td>
+			<td> 
+<a href='logout.php'><input type="submit" value="Déconnexion"/>
+</td>
 		</tr>
 	</table>
 	
@@ -38,7 +40,7 @@
 <?php
 session_start();
 if(isset($_SESSION['username'])){
-	echo "Bienvenue ".$_SESSION['username'];
+	echo "Accès autorisé.<br>Bienvenue ".$_SESSION['username'];
 	?>
 <?php 
 }else header('Location:login.php')
@@ -64,10 +66,6 @@ if(isset($_SESSION['username'])){
 			</tr>
 			</table>
 			
-<?php
-echo "<a href='logout.php'><p>Déconnexion</p><br><br>";
-?>
-
 <!-- Section pied-de-page -->
 
 <footer>

@@ -17,7 +17,9 @@
 		<tr>
 			<td class="tdLogo"><img id="logo" src="LOGO_ST.png" align="center"/></td>
 			<td class="titre">SUBLIME TROOPERS</td>
-			<td class=blank></td>
+			<td> 
+<a href='logout.php'><input type="submit" value="Déconnexion"/>
+</td>
 		</tr>
 	</table>
 	
@@ -93,11 +95,6 @@ if(isset($_SESSION['username'])){
 		<td> <iframe width="560" height="315" src="https://www.youtube.com/embed/JN7FQ6-Tjc0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</p>	</td>	</tr>
 		
-		
-<?php
-echo "<a href='logout.php'><p>Déconnexion</p><br><br>";
-?>
-
 <!-- Section pied-de-page -->
 
 <footer>

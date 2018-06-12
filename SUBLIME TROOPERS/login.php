@@ -2,8 +2,7 @@
 session_start();
 include_once 'PDOConnection.php';
 if (isset($_POST['submit'])){
-    $login=$_POST['login'];
-    $password=$_POST['password'];
+	extract($_POST);
     if(empty($login)){
         echo"<div class='erreur'> Veuillez saisir votre login</div>";
     } else if (empty($password)){
@@ -13,8 +12,8 @@ if (isset($_POST['submit'])){
         
         try{
             $bdd=PDOConnection::getInstance();
-            $password=$password;
-            $reponse = $bdd->prepare("SELECT * FROM membre WHERE nom= :login AND passworda= :password")or exit(print_r($bdd->errorInfo()));
+            $password=sha1($password);
+            $reponse = $bdd->prepare("SELECT * FROM membre WHERE mail= :login AND passworda= :password")or exit(print_r($bdd->errorInfo()));
             $reponse->bindParam(':login', $login, PDO::PARAM_STR);
             $reponse->bindParam(':password', $password, PDO::PARAM_STR);
             $reponse->execute();
@@ -52,24 +51,27 @@ if (isset($_POST['submit'])){
 
 	<form method="post" action="login.php">
 	
+		<br>
 		<table>
 			<tr>
 				<td>Login :</td>
-				<td><input type="text" name="login" />
+				<td><input type="text" placeholder="adresse mail" name="login" />
 				</td>
 			</tr>
 			<tr>
 				<td>Mot de passe :</td>
-				<td><input type="password" name="password" />
+				<td><input type="password" placeholder="mot de passe" name="password" />
 				</td>
 			</tr>
 
 		</table><br>
 
-		<div class="toto">
-			<input type="submit" value="Login" name="submit" /> <input
-				type="reset" value="Effacer" /><br> <br> <a href="inscription.html">Pas
-				encore membre ?</a>
+		<div align=right class="toto">
+		<input type="submit" value="Login" name="submit" /> 
+		<input type="reset" value="Effacer" /><br> <br> 
+		</div>
+		<div>
+		<a href="inscription.php">Pas encore membre ?</a>
 		</div>
 	</form>
 <footer>

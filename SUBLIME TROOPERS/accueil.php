@@ -17,17 +17,19 @@
 		<tr>
 			<td class="tdLogo"><img id="logo" src="LOGO_ST.png" align="center"/></td>
 			<td class="titre">SUBLIME TROOPERS</td>
-			<td class=blank></td>
+			<td>
+<a href='login.php'><input type="submit" value="Connexion"/>
+			</td>
 		</tr>
 	</table>
 	
 	<!-- menu -->
 	<ul class="menu">
-		<li><a href="accueil.html">ACCUEIL</a></li>
-		<li><a href="quisont_ils.html">QUI SONT-ILS ?</a></li>
-		<li><a href="galerie.html">GALERIE</a></li>
-		<li><a href="musique.html">MUSIQUE</a></li>
-		<li><a href="inscription.html">INSCRIPTION</a></li>
+		<li><a href="accueil.php">ACCUEIL</a></li>
+		<li><a href="quisont_ils.php">QUI SONT-ILS ?</a></li>
+		<li><a href="galerie.php">GALERIE</a></li>
+		<li><a href="musique.php">MUSIQUE</a></li>
+		<li><a href="inscription.php">INSCRIPTION</a></li>
 	</ul>
 </header>
 
@@ -39,7 +41,7 @@
 			</div>
 		</article>
 		<br>
-			<a href="inscription.html"><div align=center>Rejoignez immédiatement les Sublime Troopers !!</div></a>
+			<a href="inscription.php"><div align=center>Rejoignez immédiatement les Sublime Troopers !!</div></a>
 		</br>
 		<table>
 			<tr>

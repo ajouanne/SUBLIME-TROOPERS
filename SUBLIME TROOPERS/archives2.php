@@ -17,7 +17,9 @@
 		<tr>
 			<td class="tdLogo"><img id="logo" src="LOGO_ST.png" align="center"/></td>
 			<td class="titre">SUBLIME TROOPERS</td>
-			<td class=blank></a></td>
+			<td> 
+<a href='logout.php'><input type="submit" value="Déconnexion"/>
+</td>
 		</tr>
 	</table>
 	
@@ -51,19 +53,15 @@ if(isset($_SESSION['username'])){
 				<td> <a href="Image/RdT/Plan_de_bataille.pdf">Plan de bataille</a></td>
 			</tr>
 			<tr>
-				<td> <a href="Image/RdT/Rapport_de_transmission1.pdf">Rapport de transmission n°1</a> </td>
+				<td> <a href="Image/RdT/Rapport_de_transmission1.pdf" target="_blank">Rapport de transmission n°1</a> </td>
 			</tr>
 			<tr>
-				<td> <a href="Image/RdT/Rapport_de_transmission2.pdf">Rapport de transmission n°2</a> </td>
+				<td> <a href="Image/RdT/Rapport_de_transmission2.pdf" target="_blank">Rapport de transmission n°2</a> </td>
 			</tr>
 			<tr>
-				<td> <a href="Image/RdT/Rapport_de_transmission3.pdf">Rapport de transmission n°3</a> </td>
+				<td> <a href="Image/RdT/Rapport_de_transmission3.pdf" target="_blank">Rapport de transmission n°3</a> </td>
 			</tr>
 		</table>
-
-<?php
-echo "<a href='logout.php'><p>Déconnexion</p><br><br>";
-?>
 
 <!-- Section pied-de-page -->
 

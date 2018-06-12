@@ -31,7 +31,9 @@ body {
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.5);
 }
-
+#toto {
+	margin-right:1vw;
+}
 /* En-tête titre */
 
 header {
@@ -59,6 +61,9 @@ header {
 }
 .blank {
 	width: 20%;       /*permet d'ajouter une cellule vide pour centrer le titre*/
+}
+#connexion {
+	color: #FFFFFF;
 }
 
 /* diaporama */

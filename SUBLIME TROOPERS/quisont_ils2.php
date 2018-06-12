@@ -17,7 +17,9 @@
 		<tr>
 			<td class="tdLogo"><img id="logo" src="LOGO_ST.png" align="center"/></td>
 			<td class="titre">SUBLIME TROOPERS</td>
-			<td class=blank></td>
+			<td> 
+<a href='logout.php'><input type="submit" value="Déconnexion"/>
+</td>
 		</tr>
 	</table>
 	
@@ -102,10 +104,6 @@ if(isset($_SESSION['username'])){
 		</tr>
 		</table>
 		</article>
-
-<?php
-echo "<a href='logout.php'><p>Déconnexion</p><br><br>";
-?>
 		
 <!-- Section pied-de-page -->
 

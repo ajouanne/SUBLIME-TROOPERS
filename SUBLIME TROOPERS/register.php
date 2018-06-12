@@ -1,5 +1,6 @@
 <?php 
 include_once 'PDOConnection.php';
+session_start();
 if(isset($_POST['testEnvoi'])){
 	if ((isset($_POST['nom']) && !empty($_POST['nom']))
 				&& (isset($_POST['prenom']) && !empty($_POST['prenom']))
@@ -21,7 +22,7 @@ if(isset($_POST['testEnvoi'])){
 				if($req->rowCount() !=0 ){
 					echo "le membre existe dans la base !!";
 				}else {
-					$passworda = $passworda;
+					$passworda = sha1($passworda);
 					$reponse = $bdd->prepare("INSERT INTO membre VALUES(default,?,?,?,?,?,?)")or exit(print_r($bdd->errorInfo()));
 					$reponse->execute(array($nom,$prenom,$grade,$mail, $daten, $passworda));
 					header("Location:login.php");
